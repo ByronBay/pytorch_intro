@@ -1,7 +1,8 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import torch
 from torch.autograd import Variable
-import matplotlib.pyplot as plt
+
 
 def main():
     # create dummy data for training
@@ -13,27 +14,27 @@ def main():
     y_train = np.array(y_values, dtype=np.float32)
     y_train = y_train.reshape(-1, 1)
 
-    class linearRegression(torch.nn.Module):
-        def __init__(self, inputSize, outputSize):
-            super(linearRegression, self).__init__()
-            self.linear = torch.nn.Linear(inputSize, outputSize)
+    class LinearRegression(torch.nn.Module):
+        def __init__(self, input_size, output_size):
+            super(LinearRegression, self).__init__()
+            self.linear = torch.nn.Linear(input_size, output_size)
 
         def forward(self, x):
             out = self.linear(x)
             return out
 
-    inputDim = 1  # takes variable 'x'
-    outputDim = 1  # takes variable 'y'
-    learningRate = 0.01
+    input_dim = 1  # takes variable 'x'
+    output_dim = 1  # takes variable 'y'
+    learning_rate = 0.01
     epochs = 100
 
-    model = linearRegression(inputDim, outputDim)
-    ##### For GPU #######
+    model = LinearRegression(input_dim, output_dim)
+
     if torch.cuda.is_available():
         model.cuda()
 
     criterion = torch.nn.MSELoss()
-    optimizer = torch.optim.SGD(model.parameters(), lr=learningRate)
+    optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
 
     for epoch in range(epochs):
         # Converting inputs and labels to Variable
@@ -44,7 +45,8 @@ def main():
             inputs = Variable(torch.from_numpy(x_train))
             labels = Variable(torch.from_numpy(y_train))
 
-        # Clear gradient buffers because we don't want any gradient from previous epoch to carry forward, dont want to cummulate gradients
+        # Clear gradient buffers because we don't want any gradient from previous epoch to carry forward, dont want
+        # to cummulate gradients
         optimizer.zero_grad()
 
         # get output from the model, given the inputs
@@ -73,6 +75,7 @@ def main():
     plt.plot(x_train, predicted, '--', label='Predictions', alpha=0.5)
     plt.legend(loc='best')
     plt.show()
+
 
 if __name__ == "__main__":
     main()
