@@ -1,11 +1,14 @@
 # pytorch_intro
 Intorductory scripts to understand pytorch and its api
 
-# Linear regression
+## Linear regression
 * https://towardsdatascience.com/linear-regression-with-pytorch-eb6dedead817
 
-# Inference on exisitng model
+## GANs "slanted land"
+* https://github.com/luisguiserrano/gans/blob/master/GANs_in_Slanted_Land.ipynb
+
+## Inference on exisitng model
 * TODO use model loading from map-extract
 
-# Map extract
+## Map extract
 * https://pypi.org/project/mapextrackt/
