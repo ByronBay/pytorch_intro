@@ -4,6 +4,16 @@ import torch
 from torch.autograd import Variable
 
 
+class LinearRegression(torch.nn.Module):
+    def __init__(self, input_size, output_size):
+        super(LinearRegression, self).__init__()
+        self.linear = torch.nn.Linear(input_size, output_size)
+
+    def forward(self, x):
+        out = self.linear(x)
+        return out
+
+
 def main():
     # create dummy data for training
     x_values = [i for i in range(11)]
@@ -13,15 +23,6 @@ def main():
     y_values = [2 * i + 1 for i in x_values]
     y_train = np.array(y_values, dtype=np.float32)
     y_train = y_train.reshape(-1, 1)
-
-    class LinearRegression(torch.nn.Module):
-        def __init__(self, input_size, output_size):
-            super(LinearRegression, self).__init__()
-            self.linear = torch.nn.Linear(input_size, output_size)
-
-        def forward(self, x):
-            out = self.linear(x)
-            return out
 
     input_dim = 1  # takes variable 'x'
     output_dim = 1  # takes variable 'y'
