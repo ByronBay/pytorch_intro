@@ -7,6 +7,9 @@ Intorductory scripts to understand pytorch and its api
 ## NLP
 * https://towardsdatascience.com/bert-text-classification-using-pytorch-723dfb8b6b5b
 
+## GAN Super Simple
+* https://towardsdatascience.com/build-a-super-simple-gan-in-pytorch-54ba349920e4
+
 ## Image Classification
 * https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html
 
