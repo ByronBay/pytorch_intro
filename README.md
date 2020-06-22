@@ -7,6 +7,9 @@ Intorductory scripts to understand pytorch and its api
 ## NLP
 * https://towardsdatascience.com/bert-text-classification-using-pytorch-723dfb8b6b5b
 
+## Image Classification
+* https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html
+
 ## GANs "slanted land"
 * https://github.com/luisguiserrano/gans/blob/master/GANs_in_Slanted_Land.ipynb
 * https://towardsdatascience.com/building-neural-network-using-pytorch-84f6e75f9a
