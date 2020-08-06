@@ -12,6 +12,11 @@ Intorductory scripts to understand pytorch and its api
 * Status: :heavy_check_mark:
 * https://towardsdatascience.com/linear-regression-with-pytorch-eb6dedead817
 
+## LeNet-5
+* Status: :heavy_check_mark:
+* https://towardsdatascience.com/implementing-yann-lecuns-lenet-5-in-pytorch-5e05a0911320
+* https://github.com/erykml/medium_articles/blob/master/Computer%20Vision/lenet5_pytorch.ipynb
+
 ## NLP
 * Status: :x:
 * https://towardsdatascience.com/bert-text-classification-using-pytorch-723dfb8b6b5b
