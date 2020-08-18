@@ -6,7 +6,7 @@ from torch.utils.data import Dataset
 
 # Import mnist dataset from cvs file and convert it to torch tensor
 
-with open('mnist_train.csv', 'r') as f:
+with open('../data_temp/mnist_train.csv', 'r') as f:
     mnist_train = f.readlines()
 
 # Images

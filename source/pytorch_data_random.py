@@ -29,7 +29,7 @@ class CustomDatasetFromCSV(Dataset):
         return len(self.labels)
 
 
-dataset = CustomDatasetFromCSV('mnist_train.csv')
+dataset = CustomDatasetFromCSV('../data_temp/mnist_train.csv')
 batch_size = 16
 validation_split = .2
 shuffle_dataset = True
